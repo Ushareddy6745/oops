@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//         // Base class
+// class Vehicle {
+//     constructor(make, model, year) {
+//         this.make = make;
+//         this.model = model;
+//         this.year = year;
+//     }
+
+//     startEngine() {
+//         return `The engine of the ${this.year} ${this.make} ${this.model} starts.`;
+//     }
+
+//     stopEngine() {
+//         return `The engine of the ${this.year} ${this.make} ${this.model} stops.`;
+//     }
+// }
+
+// // Derived class Car
+// class Car extends Vehicle {
+//     constructor(make, model, year, numDoors) {
+//         super(make, model, year);
+//         this.numDoors = numDoors;
+//     }
+
+//     honk() {
+//         return "Car horn sounds: Beep beep!";
+//     }
+// }
+
+// // Derived class Bike
+// class Bike extends Vehicle {
+//     constructor(make, model, year, bikeType) {
+//         super(make, model, year);
+//         this.bikeType = bikeType;  // e.g., "Mountain", "Road", "Hybrid"
+//     }
+
+//     ringBell() {
+//         return "Bike bell rings: Ring ring!";
+//     }
+// }
+
+// // Creating objects
+// const myCar = new Car("Toyota", "Camry", 2022, 4);
+// const myBike = new Bike("Trek", "Domane", 2023, "Road");
+
+// // Using methods from both the base and derived classes
+// console.log(myCar.startEngine());  // Output: "The engine of the 2022 Toyota Camry starts."
+// console.log(myCar.honk());         // Output: "Car horn sounds: Beep beep!"
+
+// console.log(myBike.startEngine()); // Output: "The engine of the 2023 Trek Domane starts."
+// console.log(myBike.ringBell());    // Output: "Bike bell rings: Ring ring!"
+
+
+
+
+
+//creating a class 
+
+class Fruits{
+ constructor(name){
+    this.name=name;
+}
+f1(){
+    console.log(`The Name of the fruit is ${this.name}`)
+}
+}
+
+class Type1 extends Fruits{
+    constructor(name,taste){
+        super(name);
+        this.taste=taste;
+    }
+    f2(){
+        return(`The Name of the fruit is ${this.name} and taste of the fruit is ${this.taste}`) 
+    }
+}
+
+class Type2 extends Type1{
+    constructor(name,taste,like){
+        super(name,taste)
+        this.like=like
+    }
+
+   f3(){
+    return(`The Name of the fruit is ${this.name} and taste of the fruit is ${this.taste}, I ${this.like} the taste of fruit`) 
+   }
+}
+
+let fruit1=new Type1("Mango","Sweet")
+let fruit2=new Type2("lemon","Sour","dont like")  
+
+console.log(fruit1)
+console.log(fruit2)
+console.log(fruit1.f2()) 
+console.log(fruit2.f3()) 
+
+
+
+
+
+
+</script>
+</body>
+</html>
